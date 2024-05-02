@@ -11,7 +11,7 @@ const[password,setpassword]=useState();
  const handlsubmit= async(event)=>{
 event.preventDefault();
    try{
-       const result= await axios.post('https://kkshowroom.onrender.com/login',{email,password})
+       const result= await axios.post('http://localhost:4000/login',{email,password})
 if(result.data==="successful"){
   alert('Login Successful')
   navigate('/');
@@ -32,7 +32,7 @@ console.log(err);
     navigate('/Signup')
   }
   return (
-    <div className='h-screen w-screen bg-slate-300 flex items-center justify-center'>
+    <div className='h-screen w-screen bg-slate-950 flex items-center justify-center'>
 
       <div className='h-70 w-30 bg-white border-r-neutral-950 flex flex-col items-center'>
       
@@ -40,9 +40,9 @@ console.log(err);
         <div className='h-10 w-full'></div>
         <div className='h-80 w-80  justify-center  flex-col '> 
         <form  onSubmit={handlsubmit}  className='h-full w-full  flex flex-col  items-center'><input type='email'    onChange={(event) => setemail(event.target.value)}
-       required className='h-10 w-90  bg-green-100  text-gray-50' placeholder='Enter Your Name'></input>
+       required className='h-10 w-90  bg-black  text-gray-50' placeholder='Enter Your Name'></input>
         <div className='h-10 w-full'></div>
-        <input className='h-10 w-90  bg-green-100  text-gray-50' placeholder='Create Password' onChange={(event) => setpassword(event.target.value)}
+        <input className='h-10 w-90  bg-black  text-gray-50' placeholder='Create Password' onChange={(event) => setpassword(event.target.value)}
        required></input>
         <div className=' h-10 w-full'></div> 
         <button className='h-20 w-90 bg-black text-neutral-50'>Login</button>

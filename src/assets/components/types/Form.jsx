@@ -21,7 +21,7 @@ const Form = () => {
       formData.append('Date', purchaseDate);
       formData.append('photo', image);
 
-      const result = await axios.post('https://kkshowroom.onrender.com/sellcar', formData);
+      const result = await axios.post('http://localhost:4000/sellcar', formData);
 
       if (result.data === "Login") {
         alert("Login to Continue");

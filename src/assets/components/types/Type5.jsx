@@ -22,7 +22,7 @@ const Type5 = () => {
       
         try { 
           
-          const result = await axios.post('https://kkshowroom.onrender.com/service', {
+          const result = await axios.post('http://localhost:4000/service', {
             Service:"test drive",
             CarModel:Car,
           
@@ -53,9 +53,9 @@ const Type5 = () => {
         const fetchCars = async () => {
           try {
             
-            const response = await axios.post('https://kkshowroom.onrender.com/usedcars'); // Replace '/cars' with your actual endpoint
+            const response = await axios.post('http://localhost:4000/usedcars'); // Replace '/cars' with your actual endpoint
             setCars(response.data); // Update state with the fetched cars data
-          
+          console.log(setCars)
             
           } catch (error) {
             console.error('Error fetching cars data:', error);

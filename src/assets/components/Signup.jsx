@@ -11,7 +11,7 @@ const navigate=useNavigate()
   const handleSubmit =  async (event) => {
     event.preventDefault();
     try{
-const result=await axios.post('https://kkshowroom.onrender.com/register',{email,username,password});
+const result=await axios.post('http://localhost:4000/register',{email,username,password});
   if(result.data==="already registerd"){
     alert('username already registerd')
   }
@@ -30,7 +30,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
   };
 
   return (
-    <div className='h-screen w-screen bg-slate-300 flex items-center justify-center'>
+    <div className='h-screen w-screen bg-slate-950 flex items-center justify-center'>
       <div className='h-70 w-30 bg-white border-r-neutral-950 flex flex-col items-center'>
         <img className='h-20 w-full' src={toyota} alt="Toyota Background" /> 
         <div className='h-10 w-full'></div>
@@ -41,7 +41,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required 
-              className='h-10 w-90 bg-green-100 text-gray-800'  // Added bg-green-100 class
+              className='h-10 w-90 bg-black text-white'  // Added bg-green-100 class
               placeholder='Enter Your Email' 
             />
             <div className='h-10 w-full'></div>
@@ -50,7 +50,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
               value={username}
               onChange={(event) => setUsername(event.target.value)}
               required 
-              className='h-10 w-90 bg-green-100 text-gray-800'  // Added bg-green-100 class
+              className='h-10 w-90 bg-black text-white'  // Added bg-green-100 class
               placeholder='Enter Your Username' 
             />
             <div className='h-10 w-full'></div>
@@ -59,7 +59,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               required 
-              className='h-10 w-90 bg-green-100 text-gray-800'  // Added bg-green-100 class
+              className='h-10 w-90 bg-black text-white'  // Added bg-green-100 class
               placeholder='Create Password' 
             />
             <div className='h-10 w-full'></div> 

@@ -6,7 +6,7 @@ import Signup from './assets/components/Signup'
 import Service from'./assets/components/Service'
 import Contact from './assets/components/Contact';
 import Main from './assets/components/Main'
-
+import Profile from './assets/components/Profile';
 import Cartypes from './assets/components/types/Cartypes';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path="/Service" element={<Service />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Cartypes" element={<Cartypes />}/>
-        
+        <Route path="/Profile" element={<Profile />}/>
           
     </Routes>
 </BrowserRouter>

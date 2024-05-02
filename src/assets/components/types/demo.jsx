@@ -70,14 +70,14 @@ function Navigate(){
     <div className='h-full w-full flex row   justify-around  '>
       
       {cars.map((car) => (
-        <div key={car._id} className='h-full w-30 bg-black   flex flex-col '>
-          <div className='h-90 w-full bg-white  flex flex-col items-center justify-center bg  border-2 border-black rounded-3xl ' style={{ backgroundImage: `url(${car.photoUrl})`, backgroundRepeat: 'no-repeat',  backgroundSize:'fit'}}>
+        <div key={car._id} className='h-full w-30   flex flex-col '>
+          <div className='h-90 w-full bg-white  flex flex-col items-center justify-center bg-cover  border-2 border-black rounded-3xl ' style={{ backgroundImage: `url(${car.photoUrl})`, backgroundRepeat: 'no-repeat',  backgroundSize:'fit'}}>
           {/* <img src={car.photoUrl} alt={car.carname} className='w-full h-60' /> */}
           <div className='h-70 w-full'></div>
-            <h1 className='text-black text-4xl h-10 w-full text-center  '>{car.carname}</h1>
+            <h1 className='text-white text-4xl h-10 w-full text-center   '>  <b>{car.carname}</b></h1>
            
-            <p>Model: {car.carmodel}</p>
-            <p>Price: ${car.price}</p>
+            <p className='text-white '>Model: {car.carmodel}</p>
+            <p className='text-white'>Price: ${car.price}</p>
           </div>
           <div className='h-10 w-full'></div>
           <button onClick={() => run(car.carname)} className='h-10 w-full bg-neutral-300 text-black text-4xl hover:bg-white border-2 border-black rounded-3xl'>Book Test Drive</button>

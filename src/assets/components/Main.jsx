@@ -11,6 +11,7 @@ import Kk from './images/Kk.jpg'
 import about from './images/about.jpg'
 import { Slide } from 'react-reveal';
 import { useState } from "react";
+import { Link as ScrollLink } from 'react-scroll';
 // import  Carsauel from './Carsuel'
 import Carsauel from "./Carsuel";
 
@@ -23,6 +24,7 @@ const Main = () => {
   
       <Nav />
       <div className=" h-90vh w-full    bg-slate-950 overflow-y-auto ">
+      
       <div className=" h-90vh w-full flex justify-center items-center  ">
         <Carsauel/>
 
