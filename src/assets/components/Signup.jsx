@@ -11,7 +11,7 @@ const navigate=useNavigate()
   const handleSubmit =  async (event) => {
     event.preventDefault();
     try{
-const result=await axios.post('https://kkshowroom.onrender.com/register',{email,username,password});
+const result=await axios.post('https://kkshowroom.onrender.com/register',{username,email,password});
   if(result.data==="already registerd"){
     alert('username already registerd')
   }

@@ -86,7 +86,7 @@ function Navigate(){
           </select>
           <input
             className="block mb-4 px-4 py-2 rounded-lg border border-gray-400"
-            type="text"
+            type="String"
             placeholder="Registration Number"
             onChange={(e) => setCarno(e.target.value)}
             value={carno}
