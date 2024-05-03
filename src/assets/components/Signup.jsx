@@ -51,7 +51,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
               onChange={(event) => setUsername(event.target.value)}
               required 
               className='h-10 w-90 bg-black text-white'  // Added bg-green-100 class
-              placeholder='Enter Your Username' 
+              placeholder='Create Username' 
             />
             <div className='h-10 w-full'></div>
             <input 
@@ -64,7 +64,7 @@ const result=await axios.post('https://kkshowroom.onrender.com/register',{email,
             />
             <div className='h-10 w-full'></div> 
             <button className='h-20 w-90 bg-black text-neutral-50'>Signup</button>
-            <div className='h-10 w-90 font-thin text-1xl'>Already have an account? <a href="/login" className="text-blue-500">Login</a></div>
+            <div className='h-10 w-90 font-bold text-1xl'>Already have an account? <a href="/login" className="text-blue-500">Login</a></div>
           </form>
         </div>
       </div>

@@ -40,13 +40,13 @@ console.log(err);
         <div className='h-10 w-full'></div>
         <div className='h-80 w-80  justify-center  flex-col '> 
         <form  onSubmit={handlsubmit}  className='h-full w-full  flex flex-col  items-center'><input type='email'    onChange={(event) => setemail(event.target.value)}
-       required className='h-10 w-90  bg-black  text-gray-50' placeholder='Enter Your Name'></input>
+       required className='h-10 w-90  bg-black  text-gray-50' placeholder='Enter Your Email'></input>
         <div className='h-10 w-full'></div>
-        <input className='h-10 w-90  bg-black  text-gray-50' placeholder='Create Password' onChange={(event) => setpassword(event.target.value)}
+        <input className='h-10 w-90  bg-black  text-gray-50' placeholder='Enter Password' onChange={(event) => setpassword(event.target.value)}
        required></input>
         <div className=' h-10 w-full'></div> 
         <button className='h-20 w-90 bg-black text-neutral-50'>Login</button>
-        <div className='h-10 w-90 font-thin text-1xl'>Don't have an account click below to signup</div>
+        <div className='h-10 w-90 font-bold text-1xl'>Don't have an account click below to signup</div>
         <button className='h-10 w-30 bg-black  text-slate-50' onClick={signup}>Signup</button>
         </form>
         
