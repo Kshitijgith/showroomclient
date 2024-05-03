@@ -14,9 +14,6 @@ function navigate(){
 }
 
 const [car,updatecar]=useState("");
-function run(val){
-  updatecar(val);
-}
 
   const updateservice=async()=>{
     
@@ -25,7 +22,7 @@ function run(val){
       const result = await axios.post('https://kkshowroom.onrender.com/service', {
         
           Service: "Booked test drive",
-          CarModel: car,
+          CarModel: car
       
       
         
@@ -47,7 +44,7 @@ function run(val){
 }
 
 function change(val){
-  run(val);
+  updatecar(val);
   updateservice();
 }
   return (
@@ -73,6 +70,7 @@ function change(val){
           </Carousel.Caption></div>
       
       </div></Carousel.Item>
+
       <Carousel.Item interval={1000} className='h-full w-full flex-col'>
       <div className="h-full w-full flex flex-col items-center bg-cover" style={{ backgroundImage: `url("https://www.motorbeam.com/wp-content/uploads/Hyundai-Elite-i20-1200x675.jpg")`, backgroundRepeat: 'no-repeat'}}>
       <div className='h-80 w-full flex flex-col  '>

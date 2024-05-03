@@ -97,7 +97,7 @@ console.log(val);
     <>
     <button
       onClick={() => go5(0)}
-      className="h-50 w-20 bg-black hover:bg-white  text-2xl font-bold text-white hover:text-slate-300"
+      className="h-50 w-30 bg-black hover:bg-white  text-2xl font-bold text-white hover:text-slate-300"
     >
       {username}
     </button>

@@ -76,8 +76,8 @@ function Navigate(){
           <div className='h-70 w-full'></div>
             <h1 className='text-white text-4xl h-10 w-full text-center   '>  <b>{car.carname}</b></h1>
            
-            <p className='text-white '>Model: {car.carmodel}</p>
-            <p className='text-white'>Price: ${car.price}</p>
+            <p className='text-white hover:text-xl font-bold '>Model: {car.carmodel}</p>
+            <p className='text-white hover:text-xl font-bold'>Price:  ₹{car.price}</p>
           </div>
           <div className='h-10 w-full'></div>
           <button onClick={() => run(car.carname)} className='h-10 w-full bg-neutral-300 text-black text-4xl hover:bg-white border-2 border-black rounded-3xl'>Book Test Drive</button>
