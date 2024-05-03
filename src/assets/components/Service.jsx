@@ -18,7 +18,7 @@ function Navigate(){
   const handleSubmit = async (e) => {
     e.preventDefault();
     try { 
-      const result = await axios.post('http://localhost:4000/service', {
+      const result = await axios.post('https://kkshowroom.onrender.com/service', {
         Service: type,
         CarNo: carno,
         CarModel:carmodel,

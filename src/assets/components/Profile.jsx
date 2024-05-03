@@ -7,7 +7,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('http://localhost:4000/showservice');
+        const response = await axios.post('https://kkshowroom.onrender.com/showservice');
         setUserData(response.data); // Set userData to the fetched array of data
       } catch (error) {
         console.log('Error fetching data:', error);

@@ -17,13 +17,13 @@ const Nav = () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/state');
-            const userdata=await axios.post('http://localhost:4000/showservice')
+            const response = await axios.post('https://kkshowroom.onrender.com/state');
+            
             updatestate(response.data.success);
              setusername(response.data.username);
-             setuserdata(userdata.data);
-            console.log(response.data);
-            console.log(userdata);
+             
+            
+            
         } catch (error) {
             console.error('Error fetching cars data:', error);
         }
@@ -49,7 +49,7 @@ const Nav = () => {
     navigate('/Signup');
   }
   const go3=async()=>{
-    await axios.post('http://localhost:4000/logout');
+    await axios.post('https://kkshowroom.onrender.com/logout');
     navigate('/')
   }
    function go4(){

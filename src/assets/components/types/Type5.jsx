@@ -22,7 +22,7 @@ const Type5 = () => {
       
         try { 
           
-          const result = await axios.post('http://localhost:4000/service', {
+          const result = await axios.post('https://kkshowroom.onrender.com/service', {
             Service:"test drive",
             CarModel:Car,
           
@@ -53,9 +53,9 @@ const Type5 = () => {
         const fetchCars = async () => {
           try {
             
-            const response = await axios.post('http://localhost:4000/usedcars'); // Replace '/cars' with your actual endpoint
+            const response = await axios.post('https://kkshowroom.onrender.com/usedcars'); // Replace '/cars' with your actual endpoint
             setCars(response.data); // Update state with the fetched cars data
-          console.log(setCars)
+          
             
           } catch (error) {
             console.error('Error fetching cars data:', error);
@@ -64,19 +64,22 @@ const Type5 = () => {
     
         // Call the fetchCars function when the component mounts
         fetchCars();
+        
       }, []);
     return (<>
-      <div className='h-full w-full flex row   justify-around  '>
+      <div className='h-full w-full flex row   justify-around overflow-y-auto  '>
         
         {cars.map((car) => (
-          <div key={car._id} className='h-full w-30 bg-black   flex flex-col '>
-            <div className='h-90 w-full bg-white  flex flex-col items-center justify-center bg  border-2 border-black rounded-3xl ' style={{ backgroundImage: `url(${car.imageURL})`, backgroundRepeat: 'no-repeat',  backgroundSize:'cover'}}>
+          <div key={car._id} className='h-full w-30   flex flex-col '>
+            <div className='h-90 w-full bg-white  flex flex-col items-center justify-center bg  border-2 border-black rounded-3xl ' style={{ backgroundImage: `url(${car.photo})`, backgroundRepeat: 'no-repeat',  backgroundSize:'cover'}}>
             {/* <img src={car.photoUrl} alt={car.carname} className='w-full h-60' /> */}
             <div className='h-70 w-full'></div>
-              <h1 className='text-black text-4xl h-10 w-full text-center  '>{car.carname}</h1>
+              <h1 className='text-black text-4xl h-10 w-full text-center '>{car.carname}</h1>
              
               <p>Model: {car.carmodel}</p>
               <p>Price: ${car.price}</p>
+              <p>runningkilometres:{car.runningkilometres}</p>
+              <p>Date:{car.purchasedate}</p>
             </div>
             <div className='h-10 w-full'></div>
             <button onClick={() => run(car.carname)} className='h-10 w-full bg-neutral-300 text-black text-4xl hover:bg-white border-2 border-black rounded-3xl'>Book Test Drive</button>
