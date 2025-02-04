@@ -1,8 +1,24 @@
-# React + Vite
+# AUTOSTART 🚗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## PROJECT OVERVIEW
+Autostart is a car showroom website where users can create and log into their accounts to browse, buy, or sell cars. It also offers additional services like booking test drives and car maintenance services, including car wash, full service, and oiling.
 
-Currently, two official plugins are available:
+## FEATURES ✨
+- **User Accounts 👤** – Create and log in to manage activities.
+- **Buy & Sell Cars 🚘** – List cars for sale or purchase available vehicles.
+- **Test Drive Booking 🏁** – Schedule test drives for cars.
+- **Car Services 🛠️** – Book services like car wash, full service, and oiling.
+- **Image Upload 📸** – Store car images using Multer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## TECH STACK 🛠️
+### FRONTEND:
+- **React.js ⚛️** – User interface.
+- **Tailwind CSS 🎨** – Styling.
+
+### BACKEND:
+- **Node.js & Express.js 🌐** – Server-side logic.
+- **MongoDB 🗄️** – Database.
+- **Multer 🖼️** – Image storage.
+
+
+
